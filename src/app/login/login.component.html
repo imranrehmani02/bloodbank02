@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+	<!-- map section -->
+	<div class="api-map" id="contact">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 map" id="map"></div>
+			</div>
+		</div>
+	</div><!-- end of map section -->
+
+	<!-- contact section starts here -->
+	<section class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-caption clearfix">
+					<div class="contact-heading text-center">
+						<h2>Login Donor</h2>
+					 </div>
+					<div class="col-md-8 col-md-offset-2 contact-form">
+					<form class="form" #lfrm="ngForm" (ngSubmit)="login(lfrm.value)">
+                            <label>Email : </label>
+                            <input class="email" type="email" name="email" ngModel placeholder="  Email">
+                            <br>
+                            <label>Password :  </label>
+							<input class="password" type="password" name="pass" ngModel placeholder="  Password">
+							<input class="submit-btn" type="submit" name="submit" value="Login">
+							&nbsp;
+                            <b class='text-danger'>{{msg}}</b>
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- end of contact section -->
+
