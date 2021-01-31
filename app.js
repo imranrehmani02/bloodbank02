@@ -9,6 +9,10 @@ const server = express()
 const userRouter = require('./server/controller/UserRouter')
 
 server.use(express.static(path.join(__dirname,"dist/MyApp")))
+    server.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'dist', 'myApp', 'index.html'));
+    });
+
 server.use(bodyParser.json())
 server.use(cookieParser())
 server.use(session({secret:"ratlam43"})) //session secret key
